@@ -23,18 +23,18 @@ object frmMain: TfrmMain
   end
   object lblMayorOMenor: TLabel
     Left = 8
-    Height = 20
+    Height = 15
     Top = 224
-    Width = 249
+    Width = 196
     Caption = '¿La próxima carta es mayor o menor?'
     ParentColor = False
     ParentFont = False
   end
   object lblPuntos: TLabel
     Left = 8
-    Height = 20
+    Height = 15
     Top = 8
-    Width = 67
+    Width = 55
     Caption = 'Puntos: 00'
     ParentColor = False
     ParentFont = False

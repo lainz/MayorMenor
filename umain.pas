@@ -9,7 +9,7 @@ uses
   FGL, Math, Types, LCLType, Dialogs;
 
 type
-  TTipoCarta = (tcTrebol, tcCorazon, tcBasto, tcDiamante);
+  TTipoCarta = (tcBasto, tcEspada, tcCopa, tcOro);
 
 const
   TipoCartaStr: array[TTipoCarta] of string = ('Basto', 'Espada', 'Copa', 'Oro');
@@ -92,6 +92,8 @@ var
   i, j: integer;
 begin
   DoubleBuffered := True;
+
+  ListBoxCartas.ItemHeight := ListBoxCartas.Canvas.GetTextHeight('Test');
 
   Self.AutoAdjustLayout(lapAutoAdjustForDPI, Self.DesignTimeDPI,
     Screen.PixelsPerInch, Self.Width, ScaleX(Self.Width, Self.DesignTimeDPI));
@@ -202,7 +204,7 @@ begin
     ListBoxCartas.Canvas.Brush.Color := clWhite;
 
   ListBoxCartas.Canvas.FillRect(ARect);
-  ListBoxCartas.Canvas.TextOut(ARect.Left + 10, ARect.Top + 0,
+  ListBoxCartas.Canvas.TextOut(ARect.Left + ScaleX(4, Self.DesignTimeDPI), ARect.Top + 0,
     ListBoxCartas.Items[Index]);
 
   ListBoxCartas.Canvas.ClipRect := Rect(0, 0, 0, 0);
