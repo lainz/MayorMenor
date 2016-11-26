@@ -1,0 +1,78 @@
+object frmMain: TfrmMain
+  Left = 350
+  Height = 307
+  Top = 170
+  Width = 321
+  BorderStyle = bsDialog
+  Caption = 'Mayor o Menor'
+  ClientHeight = 307
+  ClientWidth = 321
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '1.6.2.0'
+  object ListBoxCartas: TListBox
+    Left = 8
+    Height = 176
+    Top = 40
+    Width = 304
+    ItemHeight = 0
+    OnDrawItem = ListBoxCartasDrawItem
+    Style = lbOwnerDrawFixed
+    TabOrder = 0
+  end
+  object lblMayorOMenor: TLabel
+    Left = 8
+    Height = 20
+    Top = 224
+    Width = 249
+    Caption = '¿La próxima carta es mayor o menor?'
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblPuntos: TLabel
+    Left = 8
+    Height = 20
+    Top = 8
+    Width = 67
+    Caption = 'Puntos: 00'
+    ParentColor = False
+    ParentFont = False
+  end
+  object btnMayor: TButton
+    Left = 8
+    Height = 25
+    Top = 248
+    Width = 75
+    Caption = 'Mayor'
+    OnClick = btnMayorClick
+    TabOrder = 1
+  end
+  object btnMenor: TButton
+    Left = 88
+    Height = 25
+    Top = 248
+    Width = 75
+    Caption = 'Menor'
+    OnClick = btnMenorClick
+    TabOrder = 2
+  end
+  object btnReiniciar: TButton
+    Left = 237
+    Height = 25
+    Top = 8
+    Width = 75
+    Caption = 'Reiniciar'
+    OnClick = btnReiniciarClick
+    TabOrder = 3
+  end
+  object btnCreditos: TButton
+    Left = 237
+    Height = 25
+    Top = 272
+    Width = 75
+    Caption = 'Créditos'
+    OnClick = btnCreditosClick
+    TabOrder = 4
+  end
+end
